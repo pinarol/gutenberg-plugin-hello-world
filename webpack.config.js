@@ -4,7 +4,9 @@ module.exports = {
   entry: "./src/index.js",
   output: {
     filename: "bundle.js",
-    path: path.resolve(__dirname, "build")
+    path: path.resolve(__dirname, "build"),
+    devtoolModuleFilenameTemplate: '[namespace]/[resource-path]',
+    devtoolNamespace: "HelloWorldPlugin"
   },
   devtool: "source-map",
   optimization: {
