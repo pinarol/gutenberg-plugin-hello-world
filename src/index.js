@@ -21,6 +21,7 @@ registerBlockType( 'gutenberg-mobile/hello-world', {
     var content = props.attributes.content;
     function onChangeContent( newContent ) {
       props.setAttributes( { content: newContent } );
+      throw new Error('Crashed!');
     }
 
     return (
